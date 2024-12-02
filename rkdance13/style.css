@@ -1,0 +1,493 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: sans-serif;
+}
+
+header {
+    background: url(./image/header_img.png);
+    background-color: #e8631c;
+    background-repeat: no-repeat;
+    background-size: cover;
+
+}
+
+.nav {
+    background-color: #303030;
+}
+
+.container {
+    margin: 0 50px;
+}
+
+.row {
+    display: flex;
+    justify-content: space-between;
+
+}
+
+.row .logo {
+    height: 40px;
+    margin: 10px 0;
+}
+
+.row ul li {
+    display: inline-block;
+    margin: 25px 0;
+}
+
+.row li a {
+    color: white;
+    text-decoration: none;
+    padding: 20px;
+    text-transform: uppercase;
+
+}
+
+.row .logo-icon i {
+    color: white;
+    margin: 25px 0;
+}
+
+.row .logo-icon .bar {
+    display: none;
+}
+
+.container h2 {
+    color: #ffffff;
+    font-weight: 400;
+    font-size: clamp(20px, 7.5vw, 125px);
+    margin-top: 200px;
+}
+
+.container p {
+    font-size: clamp(16px, 3.4vw, 30px);
+    color: #ffffff;
+    font-weight: 400;
+    width: 45%;
+    margin: 30px 0;
+}
+
+.container button {
+    background-color: #e8631c;
+    border: none;
+    padding: 10px 20px;
+    margin: 30px 0;
+    color: white;
+}
+
+.sec1 {
+    background-color: #e8631c;
+    padding: 20px 0;
+}
+
+.sec1 .sec1-h2 {
+    font-size: clamp(20px, 7.5vw, 75px);
+    text-transform: uppercase;
+    color: #ffffff;
+    font-weight: 700;
+    text-align: center;
+    padding: 20px 0;
+    padding-top: 50PX;
+}
+
+.sec1 .sec1-p1 {
+    font-size: clamp(16px, 3.5vw, 30px);
+    color: #ffffff;
+    font-weight: 400;
+    text-align: center;
+    width: 60%;
+    margin: 0 auto;
+}
+
+.sec1 .sec1-row {
+    display: flex;
+    margin: 40px 0;
+    padding: 50px 0;
+}
+
+.sec1 .sec1-row .card {
+    width: 33%;
+    margin: 0 20px;
+    background-color: #303030;
+}
+
+.sec1-row .card .sec1-h3 {
+    font-size: clamp(20px, 7.2vw, 37px);
+    text-transform: uppercase;
+    color: #ffffff;
+    font-weight: 400;
+    text-align: center;
+    margin-top: 20px;
+}
+
+.sec1-row .card .sec1-p2 {
+    font-size: clamp(16px, 3.2vw, 22px);
+    color: #ffffff;
+    font-weight: 400;
+    text-align: center;
+    width: 100%;
+    margin: 0 auto;
+    padding-bottom: 30px;
+
+}
+
+.sec2 {
+    background-color: #303030;
+    padding: 20px 0;
+}
+
+.sec2 .sec2-h2 {
+    font-size: clamp(20px, 7.5vw, 75px);
+    text-transform: uppercase;
+    color: #ffffff;
+    font-weight: 700;
+    text-align: center;
+    padding: 20px 0;
+    padding-top: 50PX;
+}
+
+.sec2 .sec2-p1 {
+    font-size: clamp(16px, 3.5vw, 30px);
+    color: #ffffff;
+    font-weight: 400;
+    text-align: center;
+    width: 60%;
+    margin: 0 auto;
+}
+
+.sec2 .sec2-row {
+    display: flex;
+    margin: 40px 0;
+    padding: 50px 0;
+}
+
+.sec2 .sec2-row .card2 {
+    width: 33%;
+    margin: 0 20px;
+    background-color: #e8631c;
+    border-radius: 8px;
+}
+
+.sec2-row .card2 .sec2-img {
+    margin: 0 auto;
+    width: 40%;
+}
+.sec2-row .card2 .sec2-img img{
+    margin: 20px auto;
+    width: 100%;
+}
+
+.sec2-row .card2 .sec2-h3 {
+    font-size: clamp(20px, 7.2vw, 37px);
+    text-transform: uppercase;
+    color: #ffffff;
+    font-weight: 400;
+    text-align: center;
+    margin-top: 20px;
+}
+
+.sec2-row .card2 .sec2-p2 {
+    font-size: clamp(16px, 3.2vw, 22px);
+    color: #ffffff;
+    font-weight: 400;
+    text-align: center;
+    width: 100%;
+    margin: 0 auto;
+    padding: 30px 0;
+
+}
+.sec2-row .card2 .sec2-btn{
+    width: 80%;
+    margin: 0 auto;
+}
+.sec2-row .card2 .sec2-btn button {
+    background-color: #303030;
+    border-radius: 5px;
+    padding: 10px 30px;
+    width: 100%;
+    font-size: clamp(16px, 3.2vw, 25px);
+}
+
+.sec3 {
+    background-color: #e8631c;
+}
+
+.sec3 .sec3-row {
+    display: flex;
+
+}
+
+.sec3 .sec3-row .sec3-img {
+    width: 50%;
+    height: 550px;
+
+}
+
+.sec3 .sec3-row .sec3-img img{
+    width: 100%;
+    object-fit: cover;
+}
+
+
+.sec3 .sec3-row .sec3-content {
+    width: 50%;
+    background-color: #e8631c;
+}
+
+.sec3 .sec3-row .sec3-content .sec3-h3 {
+    font-size: clamp(18px, 7.4vw, 50px);
+    text-transform: uppercase;
+    color: #ffffff;
+    font-weight: 700;
+    padding-top: 50px;
+
+}
+
+.sec3 .sec3-row .sec3-content .sec3-p {
+    font-size: clamp(16px, 3.4vw, 30px);
+    color: #ffffff;
+    font-weight: 400;
+    width: 90%;
+    padding-top: 30px;
+}
+
+.sec3 .sec3-row .sec3-content button {
+    background-color: #303030;
+
+    padding: 10px 50px;
+    border-radius: 5px;
+}
+
+.sec4 {
+    background-color: #e8631c;
+}
+
+.sec4 .sec4-row {
+    display: flex;
+
+}
+
+.sec4 .sec4-row .sec4-img {
+    width: 50%;
+    height: 550px;
+}
+.sec4 .sec4-row .sec4-img  img{
+    object-fit: cover;
+    width: 100%;
+}
+
+.sec4 .sec4-row .sec4-content {
+    width: 50%;
+    background-color: #e8631c;
+}
+
+.sec4 .sec4-row .sec4-content .sec4-h3 {
+    font-size: clamp(18px, 7.4vw, 50px);
+    text-transform: uppercase;
+    color: #ffffff;
+    font-weight: 700;
+    padding-top: 50px;
+
+}
+
+.sec4 .sec4-row .sec4-content .sec4-p {
+    font-size: clamp(16px, 3.4vw, 30px);
+    color: #ffffff;
+    font-weight: 400;
+    width: 90%;
+    padding-top: 30px;
+}
+
+.sec4 .sec4-row .sec4-content button {
+    background-color: #303030;
+    padding: 10px 50px;
+    border-radius: 5px;
+}
+
+.sec5 {
+    background-color: #303030;
+    color: #ffffff;
+    padding: 50px 0;
+}
+
+.sec5-row1 .sec5-h3 {
+    font-size: clamp(18px, 7.4vw, 75px);
+    text-transform: uppercase;
+    font-weight: 700;
+    text-align: center;
+    padding-top: 50px;
+}
+
+.sec5-row1 .sec5-para {
+    font-size: clamp(16px, 3.4vw, 30px);
+    font-weight: 400;
+    margin: 20px auto;
+    width: 70%;
+}
+
+.sec5-row2 {
+    display: flex;
+
+}
+
+.sec5-row2 .sec5-col {
+    width: 33%;
+    padding: 50px 0;
+}
+
+.sec5-row2 .sec5-col .sec5-row2-h3 {
+    font-size: clamp(18px, 7.4vw, 67px);
+    text-transform: uppercase;
+    color: #ffffff;
+    font-weight: 700;
+    text-align: center;
+}
+
+.sec5-row2 .sec5-col .sec5-row2-p {
+    font-size: clamp(16px, 3.4vw, 25px);
+    color: #ffffff;
+    font-weight: 400;
+    margin: 10px auto;
+}
+
+.sec6 {
+    background-image: url(./image/sec6_img.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    color: #ffffff;
+    background-color: #e8631c;
+}
+
+.sec6 .sec6-content {
+    padding: 150px 0;
+}
+
+.sec6 .sec6-content .sec6-p {
+    font-size: clamp(16px, 3.4vw, 30px);
+    font-weight: 400;
+    margin: 50px auto;
+    width: 55%;
+}
+
+.sec6 .sec6-content .sec6-h3 {
+    font-size: clamp(18px, 7.4vw, 55px);
+    text-transform: uppercase;
+    font-weight: 700;
+    text-align: center;
+    margin: 50px 0;
+}
+
+.sec7 {
+    background-color: #e8631c;
+    font-size: 30px;
+    color: #ffffff;
+    font-weight: 400;
+    font-family: "Montserrat";
+    text-align: center;
+}
+
+.sec7 .sec7-h3 {
+    font-size: clamp(18px, 7.4vw, 55px);
+    font-weight: 700;
+    text-align: center;
+    padding-top: 50px;
+}
+
+.sec7 .sec7-p {
+    font-size: clamp(16px, 3.4vw, 30px);
+    font-weight: 400;
+    margin: 0 auto;
+    padding: 30px 0;
+    width: 65%;
+}
+
+.sec7 .sec7-form {
+    padding-bottom: 30px;
+}
+
+.sec7 .sec7-form input {
+    width: 300px;
+    height: 35px;
+    border: none;
+}
+
+.sec7 .sec7-form button {
+    background-color: #303030;
+    height: 35px;
+    margin-left: -8px;
+}
+
+::placeholder {
+    color: #e8631c;
+    padding-left: 20px;
+    font-weight: 500;
+}
+
+.foot {
+    background-color: #303030;
+    color: white;
+    padding: 50px 0;
+}
+
+.foot-row {
+    display: flex;
+
+}
+
+.foot-row .foot-h4 {
+    font-size: clamp(17px, 6.1vw, 30px);
+    text-transform: uppercase;
+    font-weight: 400;
+}
+
+.foot-row .foot-col-40 {
+    width: 40%;
+}
+
+.foot-row .foot-col-40 .foot-p {
+    font-size: clamp(16px, 2.4vw, 20px);
+    font-weight: 400;
+    width: 70%;
+}
+.foot-row .foot-col-40 .col-40-ul{
+    list-style: none;
+    display: flex;
+}
+.foot-row .foot-col-40 .col-40-ul li{
+    margin: 0 10px;
+}
+.foot-row .foot-col-40 .col-40-ul li a{
+    color: white;
+    font-size: 25px;
+}
+.foot-row .foot-col-40 .col-40-ul li a:hover{
+    color: #e8631c;
+}
+
+.foot-row .foot-col-60 {
+    width: 60%;
+}
+
+.foot-row .foot-col {
+    width: 33.33%;
+}
+
+.foot-row .foot-col .foot-ul {
+    list-style: none;
+    margin: 20px 10px;
+}
+
+.foot-row .foot-col .foot-ul .foot-li {
+    margin: 10px 10px;
+}
+
+.foot-row .foot-col .foot-ul .foot-li a {
+    text-decoration: none;
+    color: white;
+}
+
+.foot-row .foot-col .foot-ul .foot-li a:hover {
+    color: #e8631c;
+}
