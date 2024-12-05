@@ -6,6 +6,10 @@ use App\Models\customer;
 use Illuminate\Http\Request;
 
 use Illuminate\Support\Facades\Hash;
+use RealRashid\SweetAlert\Facades\Alert;
+use App\MaiL\welcomemail;
+use App\MaiL\forgetMail;
+use Illuminate\Support\Facades\Mail;
 
 class CustomerController extends Controller
 {
@@ -144,15 +148,17 @@ class CustomerController extends Controller
         $data=new customer;
 
         $data->cust_name=$request->cust_name;
-        $data->email=$request->email;
+    $email=$data->email=$request->email;
         $data->password=Hash::make($request->password);
+       
 
         $data->save();
+        $emaildata=array("cust_name"=>$request->cust_name,"email"=>$request->email, "pass"=>$request->password);
+        Mail::to($email)->send(new welcomemail($emaildata));
         echo "<script>
         alert('Signup Success !');
         window.location='/user_login';
         </script>";
-        return redirect('/user_login');
     }
 
     /**
@@ -199,4 +205,71 @@ class CustomerController extends Controller
         $data->delete();
         return redirect('/manage_customer');
     }
+    public function forget_pass(Request $request)
+    {
+        return view('website.forget_pass');
+    }
+
+    public function reset_pass()
+    {
+        return view('website.reset_pass'); // Assuming forget_otp.blade.php is your OTP form view
+    }
+    public function forget_otp(Request $request)
+    {
+        $data = customer::where("email", $request->email)->first();
+        if($data){
+            $email = $data->email;
+            $id = $data->id;
+
+            $otp = rand(100000, 999999);
+
+            session()->put('ses_forget_id', $id);
+            session()->put('ses_forget_otp', $otp);
+
+            $forget_data = array("otp"=>session()->get('ses_forget_otp'));
+            Mail::to($email)->send(new forgetMail($forget_data));
+            return redirect('/forget_otp');
+        }
+        else
+        {
+            Alert::error('error', 'Username Not valid');
+            return redirect('/forget_pass');
+        }
+        
+    }
+    public function showForgetOtpForm()
+    {
+        return view('website.forget_otp'); // Assuming forget_otp.blade.php is your OTP form view
+    }
+    public function verify_otp(Request $request)
+    {
+        
+        if(session()->get('ses_forget_otp') == $request->otp){
+            
+            session()->put('ses_reset_pass', "reset");
+            session()->pull('ses_forget_otp');
+            
+            
+            return redirect('/reset_pass');
+        }
+        else
+        {
+            Alert::error('error', 'OTP is invalid');
+            return redirect('/forget_otp');
+        }
+        
+    }
+    public function update_pass($id,Request $request)
+    {
+        $data=customer::find($id);
+        $data->password=Hash::make($request->password);
+        $data->update();
+        
+        session()->pull('ses_reset_pass');
+        session()->pull('ses_forget_id');
+
+        Alert::success('Success', 'Reset Password Success');
+        return redirect('/user_login');
+    }
+    
 }

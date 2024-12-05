@@ -89,3 +89,15 @@ Route::get('/admin_logout',[AdminnController::class,'admin_logout'])->middleware
 Route::get('/manage_customer',[CustomerController::class,'show'])->middleware('after_adm');
 Route::get('/delete_customer/{id}',[CustomerController::class,'destroy'])->middleware('after_adm');
 
+
+//Forget Password
+
+Route::get('/forget_pass', [CustomerController::class, 'forget_pass']);
+Route::get('/forget_otp', [CustomerController::class, 'showForgetOtpForm']);
+Route::post('/forget_otp', [CustomerController::class, 'forget_otp']);
+
+
+Route::get('/reset_pass', [CustomerController::class, 'reset_pass']);
+Route::post('/reset_pass', [CustomerController::class, 'verify_otp']);
+
+Route::post('/reset_pass/{id}', [CustomerController::class, 'update_pass']);

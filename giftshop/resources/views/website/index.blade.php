@@ -16,7 +16,7 @@
                           if(session()->get('user_id'))
                           {
                             ?>
-                            <h2>Hey...<?php echo session('name');?> !</h2><br>
+                            <h2>Hey...  <?php echo session('name');?> !</h2><br>
                             <?php
                           }
                     ?>
@@ -25,7 +25,7 @@
                         Gift Shop
                       </h1>
                       <p>
-                        Sequi perspiciatis nulla reiciendis, rem, tenetur impedit, eveniet non necessitatibus error distinctio mollitia suscipit. Nostrum fugit doloribus consequatur distinctio esse, possimus maiores aliquid repellat beatae cum, perspiciatis enim, accusantium perferendis.
+                      After seeing that there is no rejection, the matter is bound to prevent it, it will happen not to the needs of the error, the distinction of resilience takes. Our escape from pains is the result of distinction, we may be able to repel something from the blessed when, as you see, they endure the accusers.
                       </p>
                       <a href="">
                         Contact Us
@@ -58,7 +58,7 @@
                         Gift Shop
                       </h1>
                       <p>
-                        Sequi perspiciatis nulla reiciendis, rem, tenetur impedit, eveniet non necessitatibus error distinctio mollitia suscipit. Nostrum fugit doloribus consequatur distinctio esse, possimus maiores aliquid repellat beatae cum, perspiciatis enim, accusantium perferendis.
+                      After seeing that there is no rejection, the matter is bound to prevent it, it will happen not to the needs of the error, the distinction of resilience takes. Our escape from pains is the result of distinction, we may be able to repel something from the blessed when, as you see, they endure the accusers.
                       </p>
                       <a href="">
                         Contact Us
@@ -91,7 +91,7 @@
                         Gift Shop
                       </h1>
                       <p>
-                        Sequi perspiciatis nulla reiciendis, rem, tenetur impedit, eveniet non necessitatibus error distinctio mollitia suscipit. Nostrum fugit doloribus consequatur distinctio esse, possimus maiores aliquid repellat beatae cum, perspiciatis enim, accusantium perferendis.
+                      After seeing that there is no rejection, the matter is bound to prevent it, it will happen not to the needs of the error, the distinction of resilience takes. Our escape from pains is the result of distinction, we may be able to repel something from the blessed when, as you see, they endure the accusers.
                       </p>
                       <a href="">
                         Contact Us

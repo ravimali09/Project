@@ -1,3 +1,13 @@
+<?php
+if (session()->has('ses_userid')) {
+  echo "<script>window.location='/index';</script>";
+}
+?>
+
+<?php
+ @include('sweetalert::alert')
+ ?>
+
 <!DOCTYPE html>
 <html lang="en">
   <head>
@@ -27,43 +37,32 @@
 
   <body>
 
-      <!-- **********************************************************************************************************************************************************
-      MAIN CONTENT
-      *********************************************************************************************************************************************************** -->
-
-	  <div id="login-page ">
+  
+  <div id="login-page ">
 	  	<div class="container ">
 	  	
-		      <form class="form-login" action="{{url('/user_auth')}}" method="post" enctype="multipart/form-data">
+		      <form class="form-login" action="{{url('/forget_otp')}}" method="post" enctype="multipart/form-data" style="margin: 170px auto;">
             @csrf
-		        <h2 class="form-login-heading ">Login now</h2>
+		        <h2 class="form-login-heading ">Enter Registered Email</h2>
 		        <div class="login-wrap" >
 		            <input type="text" class="form-control"  value="{{old('email')}}" placeholder="Email" autofocus name="email" >
                 @error('email')
                   <div class="alert alert-danger">{{ $message }}</div>
                 @enderror
-		            <br>
-		            <input type="password" class="form-control"  value="{{old('password')}}" placeholder="Password" name="password" >
-                @error('password')
-                  <div class="alert alert-danger">{{ $message }}</div>
-                @enderror
-		            <label class="checkbox">
-		                <span class="pull-right">
-		                    <a data-toggle="modal" href="{{url('forget_pass')}}"> Forgot Password?</a>
-		                </span>
-		            </label>
-		            <button class="btn btn-theme btn-block" href="" type="submit"><i class="fa fa-lock"></i> LOGIN</button>
+		            <br>    
+		            <button class="btn btn-theme btn-block" href="" type="submit"><i class="fa fa-lock"></i> Send OTP</button>
 		            <hr>
 		            
 		            <div class="registration">
-		                Don't have an account yet?<br/>
-		                <a class="" href="user_signup">Create an account</a>
+		                Remember PAssword?<br/>
+		                <a class="btn btn-info" href="user_login">Login</a>
 		            </div>
 		
 		        </div>
 		      </form>	  		  	
 	  	</div>
 	  </div>
+
 
     <!-- js placed at the end of the document so the pages load faster -->
     <script src="{{url('admin/assets/js/jquery.js')}}"></script>

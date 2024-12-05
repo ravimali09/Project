@@ -1,4 +1,8 @@
  
+ <?php
+ @include('sweetalert::alert')
+ ?>
+ 
  <!DOCTYPE html>
 <html>
 
